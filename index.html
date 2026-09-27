@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>天山鍼灸 訪問・出張｜空知〜札幌エリアの訪問鍼灸・整体</title>
+<meta name="description" content="空知・滝川から札幌エリアまで伺う訪問鍼灸・整体、天山鍼灸 訪問・出張です。鍼が苦手な方も整体のみで相談可能。ご家族やご友人と一緒に受けられます。">
+<style>
+  :root {
+    --main-color: #b5714f;
+    --main-color-dark: #96593c;
+    --bg-color: #fbf5ef;
+    --text-color: #3a332e;
+    --box-color: #f2e6da;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Hiragino Kaku Gothic ProN", "メイリオ", sans-serif;
+    margin: 0;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    line-height: 1.9;
+    font-size: 17px;
+  }
+  a { color: var(--main-color-dark); }
+
+  /* ヘッダー（一番上のエリア：写真の上に文字を重ねる） */
+  .slideshow {
+    position: relative;
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+    background-color: var(--main-color-dark);
+  }
+  .hero-slideshow {
+    height: 60vh;
+    min-height: 380px;
+    max-height: 520px;
+  }
+  .hero-slideshow::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0,0,0,0.35); /* 写真を少し暗くして文字を読みやすくする */
+    z-index: 1;
+  }
+  .slide {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.85);
+    font-size: 18px;
+    opacity: 0;
+    animation: fadeSlide 16s infinite;
+  }
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 写真が枠からはみ出す分は自動で切り取って、綺麗に収める */
+  }
+  .slide:nth-child(1) { animation-delay: 0s; }
+  .slide:nth-child(2) { animation-delay: 4s; }
+  .slide:nth-child(3) { animation-delay: 8s; }
+  .slide:nth-child(4) { animation-delay: 12s; }
+  @keyframes fadeSlide {
+    0% { opacity: 0; }
+    2% { opacity: 1; }
+    23% { opacity: 1; }
+    25% { opacity: 0; }
+    100% { opacity: 0; }
+  }
+  .hero-content {
+    position: absolute;
+    bottom: 8%; left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    width: 100%;
+    text-align: center;
+    color: white;
+  }
+  .hero-content h1 {
+    margin: 0 0 8px 0;
+    font-size: 26px;
+  }
+  .hero-content p.qualification {
+    margin: 0 0 20px 0;
+    font-size: 14px;
+    opacity: 0.95;
+  }
+
+  /* 予約ボタン（共通） */
+  .contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .btn {
+    display: inline-block;
+    padding: 12px 26px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+  }
+  .btn-line {
+    background-color: #06C755;
+    color: white;
+  }
+  .btn-insta {
+    background-color: white;
+    color: var(--main-color-dark);
+  }
+
+  /* 画面下に固定される予約ボタン（スマホ用） */
+  .fixed-bar {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    display: flex;
+    z-index: 100;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.15);
+  }
+  .fixed-bar a {
+    flex: 1;
+    text-align: center;
+    padding: 14px 0;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+  }
+  .fixed-bar .fb-line { background-color: #06C755; }
+  .fixed-bar .fb-insta { background-color: var(--main-color-dark); }
+  body { padding-bottom: 56px; } /* 下固定バーに文章が隠れないための余白 */
+
+  /* 各セクション */
+  section {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 50px 20px;
+  }
+  section.alt {
+    background-color: var(--box-color);
+  }
+  h2 {
+    color: var(--main-color-dark);
+    font-size: 22px;
+    border-bottom: 3px solid var(--main-color);
+    padding-bottom: 10px;
+    display: inline-block;
+  }
+  .section-inner.alt-wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 0px;
+  }
+
+  /* ご挨拶 */
+  .greeting-top {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+  }
+  .greeting-profile {
+    flex: 1 1 200px;
+  }
+  .greeting-name {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0 0 8px 0;
+  }
+  .greeting-qualification {
+    font-size: 14px;
+    color: #6b5c4d;
+    margin: 0;
+  }
+  .greeting-photo {
+    flex: 0 0 140px;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-color: var(--box-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6b5c4d;
+    font-size: 13px;
+    overflow: hidden;
+  }
+  .greeting-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  h3.greeting-heading {
+    color: var(--main-color-dark);
+    font-size: 18px;
+    margin: 0 0 10px 0;
+  }
+
+  ul.audience-list {
+    list-style: none;
+    padding: 0;
+  }
+  ul.audience-list li {
+    padding: 10px 0 10px 30px;
+    position: relative;
+    border-bottom: 1px dashed #d9c8b8;
+  }
+  ul.audience-list li::before {
+    content: "🌿";
+    position: absolute;
+    left: 0;
+  }
+
+  .treatment-note {
+    background-color: white;
+    border-left: 5px solid var(--main-color);
+    padding: 15px 20px;
+    margin-top: 20px;
+    border-radius: 4px;
+  }
+
+  /* 料金表 */
+  table.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+  }
+  table.price-table th, table.price-table td {
+    border: 1px solid #e0d3c2;
+    padding: 12px;
+    text-align: center;
+  }
+  table.price-table th {
+    background-color: white;
+    color: black;
+  }
+  table.price-table td:nth-child(2) {
+    text-align: right;
+  }
+  .price-highlight {
+    background-color: #fff3e6;
+    border: 2px solid var(--main-color);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+  }
+  .price-sub {
+    font-size: 14px;
+    color: #6b5c4d;
+    margin-top: 16px;
+  }
+
+  /* 予約の流れ */
+  ol.flow-list {
+    padding-left: 0;
+    list-style: none;
+  }
+  ol.flow-list li {
+    background-color: white;
+    padding: 16px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    position: relative;
+  }
+  .flow-title {
+    display: block;
+    text-align: center;
+    font-size: 19px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  .flow-desc {
+    display: block;
+  }
+  .flow-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    color: white;
+    font-weight: bold;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+
+  .cta-box {
+    text-align: center;
+    background-color: var(--main-color);
+    color: white;
+    padding: 40px 20px;
+    border-radius: 10px;
+  }
+  .cta-box h2 {
+    color: white;
+    border-bottom: 3px solid white;
+  }
+  .cta-box .contact-buttons { margin-top: 20px; }
+  .cta-box .btn-insta { background-color: white; color: var(--main-color-dark); }
+
+  footer {
+    text-align: center;
+    padding: 30px 20px;
+    color: #7a6b5c;
+    font-size: 13px;
+  }
+
+  /* スマホ（画面が狭い時）だけ、施術の流れの説明文を少し小さくする */
+  @media (max-width: 480px) {
+    .flow-desc {
+      font-size: 13px;
+      font-weight: 600;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <header>
+    <div class="slideshow hero-slideshow">
+      <div class="slide"><img src="images/top-1.jpg" alt="天山鍼灸 訪問・出張"></div>
+      <div class="slide"><img src="images/top-2.jpg" alt="天山鍼灸 訪問・出張"></div>
+      <div class="slide"><img src="images/top-3.jpg" alt="天山鍼灸 訪問・出張"></div>
+      <div class="slide"><img src="images/top-4.jpg" alt="天山鍼灸 訪問・出張"></div>
+      <div class="hero-content">
+        <h1>天山鍼灸 訪問・出張</h1>
+        <p class="qualification">はり師・きゅう師・JATI（日本トレーニング指導者協会）</p>
+        <div class="contact-buttons">
+          <a class="btn btn-line" href="https://lin.ee/uriYQgG">LINEで相談する</a>
+          <a class="btn btn-insta" href="https://www.instagram.com/yuki_oyamada0812">Instagramを見る</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <h2>ご挨拶</h2>
+    <div class="greeting-top">
+      <div class="greeting-profile">
+        <p class="greeting-name">天山鍼灸 訪問・出張<br>小山田有希（オヤマダ ユウキ）</p>
+        <p class="greeting-qualification">資格：はり師・きゅう師<br>JATI（日本トレーニング指導者協会）</p>
+      </div>
+      <div class="greeting-photo"><img src="images/greeting-photo.jpg" alt="小山田有希"></div>
+    </div>
+    <p style="margin-top:0;">
+      体の痛みや不調が強い。交通手段が無い、外出することが難しい方にも施術を届けたい。
+      <br>
+      本当はやりたかったことや、行きたかった場所。諦めてしまっていた方がまた少しでも出来るように。
+      <br>
+      これからの人生が豊かになるお手伝いが出来たらという想いから訪問を行っています。
+    </p>
+  </section>
+
+  <section class="alt">
+    <h2>こんな方におすすめです</h2>
+    <ul class="audience-list">
+      <li>外出することが大変な方</li>
+      <li>ご自宅で施術を受けたい方</li>
+      <li>膝や関節の痛みに悩んでいる方</li>
+      <li>神経痛や体のつらい痛みに悩んでいる方</li>
+      <li>美容鍼灸に興味がある方</li>
+      <li>鍼を受けてみたいけれど、少し怖いと感じる方</li>
+      <li>ご家族やご友人と一緒に施術を受けたい方</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>施術内容</h2>
+    <p>
+      基本の施術は、<strong>「鍼＋整体」（約60分）</strong>です。
+    </p>
+    <p style="margin-bottom:10px;"><strong>施術の流れ</strong></p>
+    <ol class="flow-list flow-steps">
+      <li>
+        <div class="flow-title"><span class="flow-badge">1</span>問診・検査</div>
+        <div class="flow-desc" style="text-align:center;">
+          お体の悩みをお聞きします。
+          <br>
+          問診や検査を行いお体の状態を確認していきます。
+          <br>
+          他にも気になる事があればお気軽にご相談ください。
+        </div>
+      </li>
+      <li>
+        <div class="flow-title"><span class="flow-badge">2</span>施術</div>
+        <div class="flow-desc" style="text-align:center;">
+          問診・検査の情報を基に鍼と整体を行います。
+          <br>
+          鍼は、お腹（腹診）や脈（脈診）の反応を見ながら、
+          <br>
+          手足のツボを使って全身の巡りを整えていきます。
+          <br>
+          整体は、背骨の関節の動きを中心に整えていきます。
+        </div>
+      </li>
+      <li>
+        <div class="flow-title"><span class="flow-badge">3</span>体の確認・ご相談</div>
+        <div class="flow-desc" style="text-align:center;">
+          施術前と比べて体の動きが良くなっているか
+          <br>
+          お体の悩みが残っていないかを確認します。
+          <br>
+          今後の施術計画や頻度も、あわせてご相談します。
+        </div>
+      </li>
+    </ol>
+    <div class="treatment-note">
+      「鍼が怖い、苦手」という方もご安心ください。整体のみの施術も可能ですので、
+      お気軽にご相談ください。
+    </div>
+    <p style="margin-top:20px;">
+      施術用のベッドはこちらでお持ちいたします。
+    </p>
+    <div class="slideshow" style="margin-top:20px; border-radius:8px;">
+      <div class="slide"><img src="images/service-1.jpg" alt="施術の様子"></div>
+      <div class="slide"><img src="images/service-2.jpg" alt="施術の様子"></div>
+      <div class="slide"><img src="images/service-3.jpg" alt="施術の様子"></div>
+      <div class="slide"><img src="images/service-4.jpg" alt="施術の様子"></div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <h2>ご家族・ご友人と一緒に受けられます</h2>
+    <p>
+      ご家族やご夫婦、親子、ご友人同士など、複数人で一緒に施術を受けていただけます。
+      おひとりずつ受けるよりも、2人以上でご一緒に受けていただくと、お得な料金になります。
+      「一人だと少し不安」という方も、ご家族やご友人と一緒なら安心して受けていただけます。
+    </p>
+  </section>
+
+  <section>
+    <h2>料金</h2>
+    <table class="price-table">
+      <tr><th>人数・内容</th><th>料金</th></tr>
+      <tr><td>1人</td><td>7,000円</td></tr>
+      <tr><td>2人</td><td>10,000円（2人合計）</td></tr>
+      <tr><td>3人</td><td>15,000円（3人合計）</td></tr>
+      <tr><td>初回</td><td>通常料金＋1,000円／人</td></tr>
+      <tr><td>美容鍼</td><td>12,000円／人</td></tr>
+    </table>
+    <div class="price-highlight">
+      2人以上で一緒に受けていただくと、お一人あたりの料金がお得になります
+    </div>
+    <p class="price-sub">
+      ・3人目以降は、お一人追加ごとに +5,000円<br>
+      ・美容鍼は複数人施術の割引対象外です
+    </p>
+  </section>
+
+  <section class="alt">
+    <h2>訪問エリア</h2>
+    <p>
+      訪問エリアは、<strong>空知〜札幌</strong>を基本としています。
+      その他の地域も訪問可能な場合がございます。
+    </p>
+    <p>
+      具体的に訪問可能かどうかは、ご予約時に確認させていただいておりますので、
+      まずはお気軽にご相談ください。
+    </p>
+  </section>
+
+  <section>
+    <h2>ご予約の流れ</h2>
+    <ol class="flow-list">
+      <li>LINEまたはInstagramのDMからご連絡ください</li>
+      <li>お悩みやご希望の日時をお伺いします（まずはご相談だけでも大丈夫です）</li>
+      <li>訪問日時が決まったら、ご自宅まで伺います</li>
+    </ol>
+  </section>
+
+  <section class="alt">
+    <h2>ご利用にあたって</h2>
+    <p>
+      キャンセル料は基本的にいただいておりません。<br>
+      ただし、ご連絡のない無断キャンセルが続いた場合は、
+      その後のご予約をお受けできないことがございますので、あらかじめご了承ください。
+    </p>
+  </section>
+
+  <section>
+    <div class="cta-box">
+      <h2>まずはお気軽にご相談ください</h2>
+      <p>ご予約の前に、内容だけ聞いてみたいという方も大歓迎です。</p>
+      <div class="contact-buttons">
+        <a class="btn btn-line" href="https://lin.ee/uriYQgG">LINEで相談する</a>
+        <a class="btn btn-insta" href="https://www.instagram.com/yuki_oyamada0812">Instagramを見る</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>天山鍼灸 訪問・出張｜はり師・きゅう師・JATI（日本トレーニング指導者協会）</p>
+    <p>&copy; 2026 天山鍼灸 訪問・出張</p>
+  </footer>
+
+  <div class="fixed-bar">
+    <a class="fb-line" href="https://lin.ee/uriYQgG">LINEで相談</a>
+    <a class="fb-insta" href="https://www.instagram.com/yuki_oyamada0812">Instagram</a>
+  </div>
+
+</body>
+</html>
